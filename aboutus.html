@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <title>about us</title>
+    <style>
+        body {
+            background-image: url(us.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        p {
+            font-color: white;
+        }
+        #def {
+        transition: all 0.4s ease-in-out;
+    }
+
+    #def:hover {
+        transform: translateY(-5px);
+        background: linear-gradient(45deg, #00ffcc, #0099cc);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+    }
+
+    #def:active {
+        transform: translateY(2px);
+        background: linear-gradient(45deg, #0099cc, #00ffcc);
+    }
+
+    #def::after {
+        content: '';
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.3);
+        transition: all 0.5s ease;
+        border-radius: 50%;
+    }
+
+    #def:hover::after {
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+    }
+
+    @keyframes floating {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    #def {
+        animation: floating 2s ease-in-out infinite;
+    }
+    #about-us {
+        animation: textAnimation 3s ease-in-out infinite;
+        background: linear-gradient(45deg, #ff6a00, #ff1493);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    @keyframes textAnimation {
+        0% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(10px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    }
+    
+    #about-us:hover {
+        animation: none;
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff6a00, 0 0 40px #ff1493;
+        transform: scale(1.1);
+    }
+    </style>
+</head>
+
+<body>
+    <Marquee style="font-size:75px; color:rgb(5, 5, 5);">Sort It Delhi</Marquee>
+    <p style="margin-top:110px;">
+        <center>
+            <h1 id="about-us" style="font-size: 100px; color: white; text-transform: uppercase; font-weight: bold; letter-spacing: 5px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);">
+                ABOUT US!
+            </h1>
+        </center>
+    </p>
+    <div>
+        <p style="font-size:35px; color:bisque"><b>Delhi Clean Website is a platform dedicated to promoting waste management and
+                segregation.
+                Our mission is to empower individuals and groups with innovative ideas and facilities that help them
+                manage and
+                segregate their waste effectively,
+                thereby reducing overall waste production and directly contributing to environmental sustainability.
+            </b></p>
+    </div>
+    <div id="abc" style="display:none;">
+        <b style="color:#e5a609; font-size:40px;"><u>KEY OFFERING:</u></b><br>
+        <p style="font-size:35px; color:bisque;"><b>
+                <u>Waste Management & Segregation Solutions</u></b><br>
+            We provide practical solutions and facilities that make waste segregation simple
+            and efficient for individuals and communities.
+        </p>
+        <p style="font-size:35px; color:bisque;"><b>
+                <u>Environmental Awareness & Education</u></b><br>
+            Our platform shares ideas and tips to inspire responsible waste management and sustainable living.
+        </p>
+        <p style="font-size:35px; color:bisque;"><b>
+                <u>Support for Handicrafts Companies</u></b><br>
+            We supply reusable and upcycled materials at low costs to handicraft companies,
+            fostering creativity while reducing waste.
+        </p>
+        <p style="font-size:35px; color:bisque;"><b>
+                <u>Community Impact</u></b><br>
+            By promoting responsible waste practices and supporting recycling-based industries,
+            we help minimize waste's environmental footprint.
+        </p>
+        <p style="font-size:35px; color:bisque;"><b>
+                Together, we aim to build a cleaner, greener future for Delhi and beyond.<br>
+                We believe in making a positive impact through responsible waste segregation. 
+                We empower individuals and communities to reduce, reuse, and recycle waste, thereby contributing to a cleaner and healthier planet.
+            </b>
+        </p>
+    </div>
+    <div>
+        <center>
+            <button id="def" onclick="handleClick()" style="font-size: 20px; color: white; padding: 15px 40px; border: 2px solid transparent; border-radius: 30px; background: linear-gradient(45deg, #00b3b3, #00ccff); cursor: pointer; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                <b>Learn More</b>
+            </button>
+        </center>
+    </div>
+<script>
+    let maindiv=document.getElementById("abc")
+    let btn=document.getElementById("def")
+    function handleClick(){
+        if(maindiv.style.display === "none"){
+            maindiv.style.display="block"	
+            btn.innerHTML="Go Back"
+            btn.style.backgroundColor="rgb(	0,139,139)"
+        }
+        else{
+            maindiv.style.display="none"
+            btn.innerHTML="Learn More"
+            btn.style.backgroundColor="rgb(0, 255, 225)"
+        }
+        
+
+    }
+</script>
+
+
+</body>
